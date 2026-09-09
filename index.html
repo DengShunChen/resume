@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Deng-Shun Chen - Resume</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 9mm 12mm 8mm 12mm;
+  }
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html, body {
+    background: #ffffff;
+    color: #1f2937;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 9.15pt;
+    line-height: 1.32;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .page {
+    width: 100%;
+    max-width: 820px;
+    margin: 0 auto;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    border-bottom: 1.5px solid #1e3a8a;
+    padding-bottom: 5px;
+    margin-bottom: 6px;
+  }
+  .name {
+    font-size: 15.5pt;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+  .tagline {
+    font-size: 9.2pt;
+    font-weight: 600;
+    color: #1e3a8a;
+    letter-spacing: 0.3px;
+    margin-bottom: 3px;
+  }
+  .contact-bar {
+    font-size: 8.6pt;
+    color: #4b5563;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+  .contact-bar span.sep {
+    color: #9ca3af;
+    font-size: 7.5pt;
+  }
+  .contact-bar a {
+    color: #1e3a8a;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  /* Section Styles */
+  .section-title {
+    font-size: 9.5pt;
+    font-weight: 700;
+    color: #1e3a8a;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid #cbd5e1;
+    padding-bottom: 1px;
+    margin-top: 5px;
+    margin-bottom: 3px;
+  }
+  .summary-content {
+    font-size: 8.75pt;
+    color: #374151;
+    text-align: left;
+    line-height: 1.32;
+  }
+
+  /* Skills */
+  .skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8px;
+  }
+  .skill-item {
+    font-size: 8.65pt;
+    color: #374151;
+    line-height: 1.28;
+    text-align: left;
+  }
+  .skill-item strong {
+    color: #0f172a;
+    font-weight: 650;
+  }
+
+  /* Experience */
+  .exp-item {
+    margin-bottom: 3px;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 9.15pt;
+  }
+  .company-name {
+    font-weight: 700;
+    color: #0f172a;
+  }
+  .exp-location {
+    font-size: 8.5pt;
+    font-weight: 500;
+    color: #4b5563;
+  }
+  .exp-sub {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 8.65pt;
+    margin-bottom: 1.5px;
+  }
+  .exp-role {
+    font-weight: 600;
+    color: #1e3a8a;
+    font-style: italic;
+  }
+  .exp-dates {
+    font-size: 8.35pt;
+    color: #4b5563;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Bullet Lists */
+  ul.bullet-list {
+    list-style-type: disc;
+    padding-left: 14px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+  }
+  ul.bullet-list li {
+    font-size: 8.65pt;
+    color: #374151;
+    line-height: 1.3;
+    text-align: left;
+    margin-bottom: 1.2px;
+  }
+  ul.bullet-list li strong {
+    color: #0f172a;
+    font-weight: 600;
+  }
+
+  /* Education */
+  .edu-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 8.65pt;
+    line-height: 1.3;
+  }
+  .edu-left {
+    color: #374151;
+  }
+  .edu-left strong {
+    color: #0f172a;
+    font-weight: 650;
+  }
+  .edu-dates {
+    font-size: 8.35pt;
+    color: #4b5563;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Print Settings */
+  @media print {
+    body {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .page {
+      max-width: 100%;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <!-- Header -->
+  <div class="header">
+    <div class="name">Deng-Shun Chen (陳登舜)</div>
+    <div class="tagline">Senior HPC &amp; AI Systems Engineer / Infrastructure Architect</div>
+    <div class="contact-bar">
+      <span>Taipei / Taoyuan, Taiwan</span>
+      <span class="sep">|</span>
+      <span>(+886) 912-551-179</span>
+      <span class="sep">|</span>
+      <a href="mailto:chendengshun@gmail.com">chendengshun@gmail.com</a>
+      <span class="sep">|</span>
+      <a href="https://github.com/DengShunChen" target="_blank">github.com/DengShunChen</a>
+    </div>
+  </div>
+
+  <!-- Professional Summary -->
+  <div class="section-title">Professional Summary</div>
+  <div class="summary-content">
+    Senior HPC &amp; AI Systems Engineer and Architect with 10+ years of production experience across tier-one supercomputing infrastructure, parallel storage architectures, and distributed scientific AI acceleration. Directs systems architecture and maintenance for Taiwan's 6th-Generation Supercomputing Cluster at the Central Weather Administration (CWA), consistently maintaining 99% operational availability. Expert in diagnosing extreme-scale I/O and communication bottlenecks (Lustre/FEFS, InfiniBand/Tofu), orchestrating heterogeneous GPU/CPU clusters (Slurm, PBS, PJM), and tuning foundation models across CUDA, HIP, C++, and Fortran.
+  </div>
+
+  <!-- Technical Skills -->
+  <div class="section-title">Technical Skills</div>
+  <div class="skills-list">
+    <div class="skill-item"><strong>HPC Cluster Orchestration:</strong> Slurm, Fujitsu PJM, PBS, MPI (OpenMPI), Topology-Aware Scheduling, NUMA/Socket Pinning, InfiniBand, Tofu Interconnect.</div>
+    <div class="skill-item"><strong>Accelerated Computing &amp; AI:</strong> PyTorch, HIP, CUDA, ROCm, GPGPU Parallel Computing, Distributed Training (FSDP, DDP), NVIDIA PhysicsNeMo (CorrDiff), FourCastNet, Kernel Profiling (<code>rocprof</code>, <code>Omnitrace</code>, <code>torch.profiler</code>).</div>
+    <div class="skill-item"><strong>Parallel Storage &amp; Systems I/O:</strong> Lustre, Fujitsu Exabyte File System (FEFS), WEKA, DAOS, Storage Fragmentation Modeling (G/G/c, Fork-Join), I/O Latency Diagnostics &amp; Striping Optimization.</div>
+    <div class="skill-item"><strong>Infrastructure, Cloud &amp; MLOps:</strong> Red Hat OpenShift, Kubernetes, Apptainer/Singularity, Docker, Spack, Linux/UNIX Administration (RHEL/CentOS/Rocky), Bash.</div>
+    <div class="skill-item"><strong>Programming &amp; Data:</strong> Python, Modern Fortran, C/C++, SQL (MySQL, PostgreSQL), PHP, Large-Scale Data Analysis &amp; Error Assessment.</div>
+  </div>
+
+  <!-- Professional Experience -->
+  <div class="section-title">Professional Experience</div>
+
+  <div class="exp-item">
+    <div class="exp-header">
+      <span class="company-name">Taiwan Fujitsu</span>
+      <span class="exp-location">Taipei, Taiwan</span>
+    </div>
+    <div class="exp-sub">
+      <span class="exp-role">Senior Engineer / Systems Analyst (HPC Performance &amp; Architecture) | Stationed at CWA</span>
+      <span class="exp-dates">Jan 2020 – Present</span>
+    </div>
+    <ul class="bullet-list">
+      <li>Direct system architecture and mission-critical SLA maintenance for CWA's 6th-Gen Supercomputing System, sustaining <strong>99% operational availability</strong> for national real-time numerical weather prediction.</li>
+      <li>Architect and scale distributed AI pipelines for generative downscaling (PhysicsNeMo CorrDiff) and atmospheric foundation models (FourCastNet), achieving <strong>3.8x throughput speedup</strong> and maintaining <strong>&gt;85% multi-GPU scaling efficiency</strong>.</li>
+      <li>Diagnosed and eliminated critical I/O latency bottlenecks across petascale Lustre and FEFS environments; developed mathematical queuing models (G/G/c and Fork-Join) for storage fragmentation that recovered throughput by <strong>42%</strong> and cut checkpoint latency by <strong>30%</strong>.</li>
+      <li>Optimized mission-critical numerical models (GFS, WRF) through code parallelization and workflow re-engineering, reducing core runtime by <strong>35%</strong> for real-time typhoon forecasting operations.</li>
+      <li>Automated cluster health monitoring and analytics on the FX1000 supercomputer, eliminating <strong>80%</strong> of manual overhead while executing resource phased re-entry policies during severe I/O load.</li>
+      <li>Spearheaded international technology transfer with Fujitsu Japan HQ for supercomputer deployment and localization, authoring comprehensive architectural guides and delivering technical training to <strong>60+</strong> engineers.</li>
+    </ul>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-header">
+      <span class="company-name">National Central University (NCU)</span>
+      <span class="exp-location">Taoyuan, Taiwan</span>
+    </div>
+    <div class="exp-sub">
+      <span class="exp-role">Assistant Researcher</span>
+      <span class="exp-dates">Aug 2012 – Dec 2019</span>
+    </div>
+    <ul class="bullet-list">
+      <li>Maintained and optimized the CWA Global Forecast Data Assimilation System and Next-Generation Ensemble Typhoon Prediction System.</li>
+      <li>Parallelized high-dimensional atmospheric data processing pipelines, optimizing matrix operations, MPI collective communication, and NetCDF/HDF5 I/O routines on distributed clusters.</li>
+    </ul>
+  </div>
+
+  <!-- Selected Projects -->
+  <div class="section-title">Selected Projects &amp; Open Source</div>
+  <ul class="bullet-list">
+    <li><strong>Distributed AI Downscaling Pipeline</strong> (github.com/DengShunChen): Implemented scale-out distributed training and inference workflows for generative diffusion models (PhysicsNeMo CorrDiff); engineered asynchronous data pipelines to eliminate GPU starvation.</li>
+    <li><strong>Storage Fragmentation Analyzer</strong> (github.com/DengShunChen): Implemented queuing theory algorithms (G/G/c and Fork-Join) to benchmark and mitigate file system fragmentation overhead across parallel storage nodes.</li>
+  </ul>
+
+  <!-- Patents, Publications & Honors -->
+  <div class="section-title">Patents, Publications &amp; Honors</div>
+  <ul class="bullet-list">
+    <li><strong>Invention Patent:</strong> Wave Height Prediction System (浪高預測系統), Patent No: <strong>TW202518306A</strong>.</li>
+    <li><strong>Academic Research:</strong> <em>"Modeling Parallel File System Fragmentation via G/G/c and Fork-Join Queuing Theory"</em> (Targeting FGCS / ICS, 2026); Co-authored <em>"Development of a MPAS-JEDI Prototype in CWA"</em>, Joint MPAS/WRF Workshop, 2026.</li>
+    <li><strong>Honor:</strong> <strong>AI Best Partner Award (AI 最佳夥伴獎)</strong>, Taiwan Fujitsu, Oct 2025.</li>
+  </ul>
+
+  <!-- Education -->
+  <div class="section-title">Education</div>
+  <div class="edu-row">
+    <span class="edu-left"><strong>National Central University (NCU)</strong> — Master of Science (M.S.) in Atmospheric Sciences</span>
+    <span class="edu-dates">Sep 2010 – Jun 2012</span>
+  </div>
+  <div class="edu-row">
+    <span class="edu-left"><strong>National Central University (NCU)</strong> — Bachelor of Science (B.S.) in Atmospheric Physics</span>
+    <span class="edu-dates">Sep 2006 – Jun 2010</span>
+  </div>
+</div>
+
+</body>
+</html>

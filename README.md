@@ -13,4 +13,3 @@ Online resume and professional portfolio focused on meteorology, high-performanc
 ## Contact
 
 - GitHub: [@DengShunChen](https://github.com/DengShunChen)
-- LinkedIn: [Deng-Shun Chen](https://www.linkedin.com/in/deng-shun-chen/)

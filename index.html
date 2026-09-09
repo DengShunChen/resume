@@ -197,6 +197,38 @@
       text-decoration: none;
     }
   }
+
+  .language-switcher {
+    position: fixed;
+    top: 10px;
+    right: 12px;
+    z-index: 10;
+    display: flex;
+    gap: 2px;
+    padding: 2px;
+    border: 1px solid #cbd5e1;
+    border-radius: 999px;
+    background: #ffffff;
+    box-shadow: 0 1px 4px rgba(15, 23, 42, 0.12);
+  }
+  .language-switcher button {
+    border: 0;
+    border-radius: 999px;
+    padding: 3px 8px;
+    background: transparent;
+    color: #64748b;
+    cursor: pointer;
+    font: 600 8pt inherit;
+  }
+  .language-switcher button.active {
+    background: #1e3a8a;
+    color: #ffffff;
+  }
+  @media print {
+    .language-switcher {
+      display: none;
+    }
+  }
 </style>
 </head>
 <body>
@@ -296,6 +328,142 @@
     <span class="edu-dates">Sep 2006 – Jun 2010</span>
   </div>
 </div>
+
+
+<script>
+  const bilingualContent = {
+    en: {
+      tagline: "Senior HPC &amp; AI Systems Engineer / Infrastructure Architect",
+      titles: [
+        "Professional Summary", "Technical Skills", "Professional Experience",
+        "Selected Projects &amp; Open Source", "Patents, Publications &amp; Honors", "Education"
+      ],
+      summary: "Senior HPC &amp; AI Systems Engineer and Architect with 10+ years of production experience across tier-one supercomputing infrastructure, parallel storage architectures, and distributed scientific AI acceleration. Directs systems architecture and maintenance for Taiwan's 6th-Generation Supercomputing Cluster at the Central Weather Administration (CWA), consistently maintaining 99% operational availability. Expert in diagnosing extreme-scale I/O and communication bottlenecks (Lustre/FEFS, InfiniBand/Tofu), orchestrating heterogeneous GPU/CPU clusters (Slurm, PBS, PJM), and tuning foundation models across CUDA, HIP, C++, and Fortran.",
+      skills: [
+        "<strong>HPC Cluster Orchestration:</strong> Slurm, Fujitsu PJM, PBS, MPI (OpenMPI), Topology-Aware Scheduling, NUMA/Socket Pinning, InfiniBand, Tofu Interconnect.",
+        "<strong>Accelerated Computing &amp; AI:</strong> PyTorch, HIP, CUDA, ROCm, GPGPU Parallel Computing, Distributed Training (FSDP, DDP), NVIDIA PhysicsNeMo (CorrDiff), FourCastNet, Kernel Profiling (<code>rocprof</code>, <code>Omnitrace</code>, <code>torch.profiler</code>).",
+        "<strong>Parallel Storage &amp; Systems I/O:</strong> Lustre, Fujitsu Exabyte File System (FEFS), WEKA, DAOS, Storage Fragmentation Modeling (G/G/c, Fork-Join), I/O Latency Diagnostics &amp; Striping Optimization.",
+        "<strong>Infrastructure, Cloud &amp; MLOps:</strong> Red Hat OpenShift, Kubernetes, Apptainer/Singularity, Docker, Spack, Linux/UNIX Administration (RHEL/CentOS/Rocky), Bash.",
+        "<strong>Programming &amp; Data:</strong> Python, Modern Fortran, C/C++, SQL (MySQL, PostgreSQL), PHP, Large-Scale Data Analysis &amp; Error Assessment."
+      ],
+      roles: [
+        "Senior Engineer / Systems Analyst (HPC Performance &amp; Architecture) | Stationed at CWA",
+        "Assistant Researcher"
+      ],
+      bullets: [
+        [
+          "Direct system architecture and mission-critical SLA maintenance for CWA's 6th-Gen Supercomputing System, sustaining <strong>99% operational availability</strong> for national real-time numerical weather prediction.",
+          "Architect and scale distributed AI pipelines for generative downscaling (PhysicsNeMo CorrDiff) and atmospheric foundation models (FourCastNet), achieving <strong>3.8x throughput speedup</strong> and maintaining <strong>&gt;85% multi-GPU scaling efficiency</strong>.",
+          "Diagnosed and eliminated critical I/O latency bottlenecks across petascale Lustre and FEFS environments; developed mathematical queuing models (G/G/c and Fork-Join) for storage fragmentation that recovered throughput by <strong>42%</strong> and cut checkpoint latency by <strong>30%</strong>.",
+          "Optimized mission-critical numerical models (GFS, WRF) through code parallelization and workflow re-engineering, reducing core runtime by <strong>35%</strong> for real-time typhoon forecasting operations.",
+          "Automated cluster health monitoring and analytics on the FX1000 supercomputer, eliminating <strong>80%</strong> of manual overhead while executing resource phased re-entry policies during severe I/O load.",
+          "Spearheaded international technology transfer with Fujitsu Japan HQ for supercomputer deployment and localization, authoring comprehensive architectural guides and delivering technical training to <strong>60+</strong> engineers."
+        ],
+        [
+          "Maintained and optimized the CWA Global Forecast Data Assimilation System and Next-Generation Ensemble Typhoon Prediction System.",
+          "Parallelized high-dimensional atmospheric data processing pipelines, optimizing matrix operations, MPI collective communication, and NetCDF/HDF5 I/O routines on distributed clusters."
+        ],
+        [
+          "<strong>Distributed AI Downscaling Pipeline</strong> (github.com/DengShunChen): Implemented scale-out distributed training and inference workflows for generative diffusion models (PhysicsNeMo CorrDiff); engineered asynchronous data pipelines to eliminate GPU starvation.",
+          "<strong>Storage Fragmentation Analyzer</strong> (github.com/DengShunChen): Implemented queuing theory algorithms (G/G/c and Fork-Join) to benchmark and mitigate file system fragmentation overhead across parallel storage nodes."
+        ],
+        [
+          "<strong>Invention Patent:</strong> Wave Height Prediction System (浪高預測系統), Patent No: <strong>TW202518306A</strong>.",
+          "<strong>Academic Research:</strong> <em>\"Modeling Parallel File System Fragmentation via G/G/c and Fork-Join Queuing Theory\"</em> (Targeting FGCS / ICS, 2026); Co-authored <em>\"Development of a MPAS-JEDI Prototype in CWA\"</em>, Joint MPAS/WRF Workshop, 2026.",
+          "<strong>Honor:</strong> <strong>AI Best Partner Award (AI 最佳夥伴獎)</strong>, Taiwan Fujitsu, Oct 2025."
+        ]
+      ],
+      education: [
+        "<strong>National Central University (NCU)</strong> — Master of Science (M.S.) in Atmospheric Sciences",
+        "<strong>National Central University (NCU)</strong> — Bachelor of Science (B.S.) in Atmospheric Physics"
+      ]
+    },
+    zh: {
+      tagline: "資深高效能運算與 AI 系統工程師／基礎設施架構師",
+      titles: ["專業摘要", "技術技能", "工作經歷", "精選專案與開源貢獻", "專利、發表與榮譽", "學歷"],
+      summary: "具備超過 10 年生產環境經驗的高效能運算與 AI 系統工程師暨架構師，專長涵蓋頂尖超級運算基礎設施、平行儲存架構與分散式科學 AI 加速。目前負責臺灣第六代超級電腦（中央氣象署）的系統架構與維運，長期維持 99% 系統可用率。精通極大規模 I/O 與通訊瓶頸診斷（Lustre/FEFS、InfiniBand/Tofu）、異質 GPU/CPU 叢集調度（Slurm、PBS、PJM），以及 CUDA、HIP、C++ 與 Fortran 基礎模型效能調校。",
+      skills: [
+        "<strong>HPC 叢集調度：</strong> Slurm、Fujitsu PJM、PBS、MPI（OpenMPI）、拓撲感知排程、NUMA/Socket 綁定、InfiniBand、Tofu 互連。",
+        "<strong>加速運算與 AI：</strong> PyTorch、HIP、CUDA、ROCm、GPGPU 平行運算、分散式訓練（FSDP、DDP）、NVIDIA PhysicsNeMo（CorrDiff）、FourCastNet、核心效能分析（<code>rocprof</code>、<code>Omnitrace</code>、<code>torch.profiler</code>）。",
+        "<strong>平行儲存與系統 I/O：</strong> Lustre、Fujitsu Exabyte File System（FEFS）、WEKA、DAOS、儲存碎片模型（G/G/c、Fork-Join）、I/O 延遲診斷與條帶化最佳化。",
+        "<strong>基礎設施、雲端與 MLOps：</strong> Red Hat OpenShift、Kubernetes、Apptainer/Singularity、Docker、Spack、Linux/UNIX 管理（RHEL/CentOS/Rocky）、Bash。",
+        "<strong>程式與資料：</strong> Python、Modern Fortran、C/C++、SQL（MySQL、PostgreSQL）、PHP、大規模資料分析與誤差評估。"
+      ],
+      roles: [
+        "資深工程師／系統分析師（HPC 效能與架構）｜派駐中央氣象署",
+        "研究助理"
+      ],
+      bullets: [
+        [
+          "負責中央氣象署第六代超級電腦系統架構與關鍵 SLA 維運，為國家即時數值天氣預報維持<strong> 99% 系統可用率</strong>。",
+          "架構並擴展生成式降尺度（PhysicsNeMo CorrDiff）與大氣基礎模型（FourCastNet）的分散式 AI 管線，達成<strong> 3.8 倍吞吐量提升</strong>及<strong>超過 85% 多 GPU 擴展效率</strong>。",
+          "診斷並排除 petascale Lustre 與 FEFS 環境的關鍵 I/O 延遲瓶頸；建立 G/G/c 與 Fork-Join 儲存碎片排隊模型，使吞吐量恢復<strong> 42%</strong>，checkpoint 延遲降低<strong> 30%</strong>。",
+          "透過程式平行化與工作流程重構，最佳化 GFS、WRF 等關鍵數值模式，使即時颱風預報作業的核心執行時間降低<strong> 35%</strong>。",
+          "在 FX1000 超級電腦上自動化叢集健康監控與分析，減少<strong> 80%</strong> 人工作業負擔，並在高 I/O 負載期間執行分階段資源恢復政策。",
+          "主導與 Fujitsu 日本總部的超級電腦部署及在地化技術移轉，撰寫完整架構指南並為<strong> 超過 60 位</strong>工程師提供技術培訓。"
+        ],
+        [
+          "維護並最佳化中央氣象署全球預報資料同化系統與新一代系集颱風預報系統。",
+          "平行化高維度大氣資料處理管線，最佳化分散式叢集上的矩陣運算、MPI collective communication 及 NetCDF/HDF5 I/O。",
+        ],
+        [
+          "<strong>分散式 AI 降尺度管線</strong>（github.com/DengShunChen）：實作 PhysicsNeMo CorrDiff 生成式擴散模型的橫向擴展分散式訓練與推論工作流程；設計非同步資料管線以消除 GPU 閒置。",
+          "<strong>儲存碎片分析器</strong>（github.com/DengShunChen）：實作 G/G/c 與 Fork-Join 排隊理論演算法，量測並降低平行儲存節點的檔案系統碎片負擔。"
+        ],
+        [
+          "<strong>發明專利：</strong>浪高預測系統，專利號：<strong>TW202518306A</strong>。",
+          "<strong>學術研究：</strong><em>「以 G/G/c 與 Fork-Join 排隊理論建模平行檔案系統碎片」</em>（預計投稿 FGCS / ICS，2026）；共同作者：<em>「中央氣象署 MPAS-JEDI 原型系統開發」</em>，MPAS/WRF 聯合工作坊，2026。",
+          "<strong>榮譽：</strong><strong>AI 最佳夥伴獎</strong>，台灣富士通，2025 年 10 月。"
+        ]
+      ],
+      education: [
+        "<strong>國立中央大學（NCU）</strong> — 大氣科學理學碩士",
+        "<strong>國立中央大學（NCU）</strong> — 大氣物理學理學學士"
+      ]
+    }
+  };
+
+  const languageSwitcher = document.createElement("div");
+  languageSwitcher.className = "language-switcher";
+  languageSwitcher.setAttribute("aria-label", "Language");
+  languageSwitcher.innerHTML = '<button type="button" data-language="zh">繁中</button><button type="button" data-language="en">English</button>';
+  document.body.prepend(languageSwitcher);
+
+  function setLanguage(language) {
+    const content = bilingualContent[language];
+    document.documentElement.lang = language === "zh" ? "zh-Hant" : "en";
+    document.title = language === "zh" ? "陳登舜 - 履歷" : "Deng-Shun Chen - Resume";
+    document.querySelector(".tagline").innerHTML = content.tagline;
+    document.querySelector(".summary-content").innerHTML = content.summary;
+    document.querySelectorAll(".section-title").forEach((element, index) => {
+      element.innerHTML = content.titles[index];
+    });
+    document.querySelectorAll(".skill-item").forEach((element, index) => {
+      element.innerHTML = content.skills[index];
+    });
+    document.querySelectorAll(".exp-role").forEach((element, index) => {
+      element.innerHTML = content.roles[index];
+    });
+    document.querySelectorAll(".bullet-list").forEach((list, listIndex) => {
+      list.querySelectorAll("li").forEach((item, itemIndex) => {
+        item.innerHTML = content.bullets[listIndex][itemIndex];
+      });
+    });
+    document.querySelectorAll(".edu-left").forEach((element, index) => {
+      element.innerHTML = content.education[index];
+    });
+    languageSwitcher.querySelectorAll("button").forEach((button) => {
+      button.classList.toggle("active", button.dataset.language === language);
+    });
+    localStorage.setItem("resume-language", language);
+  }
+
+  languageSwitcher.addEventListener("click", (event) => {
+    const button = event.target.closest("button");
+    if (button) setLanguage(button.dataset.language);
+  });
+  setLanguage(localStorage.getItem("resume-language") || "en");
+</script>
 
 </body>
 </html>

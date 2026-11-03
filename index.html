@@ -250,7 +250,7 @@
   <!-- Professional Summary -->
   <div class="section-title">Professional Summary</div>
   <div class="summary-content">
-    Senior HPC &amp; AI Systems Engineer and Architect with 10+ years of production experience across tier-one supercomputing infrastructure, parallel storage architectures, and distributed scientific AI acceleration. Directs systems architecture and maintenance for Taiwan's 6th-Generation Supercomputing Cluster at the Central Weather Administration (CWA), consistently maintaining 99% operational availability. Expert in diagnosing extreme-scale I/O and communication bottlenecks (Lustre/FEFS, InfiniBand/Tofu), orchestrating heterogeneous GPU/CPU clusters (Slurm, PBS, PJM), and tuning foundation models across CUDA, HIP, C++, and Fortran.
+    Senior HPC &amp; AI Systems Engineer and Architect with 14+ years of production experience across tier-one supercomputing infrastructure, parallel storage architectures, and distributed scientific AI acceleration. Directs systems architecture and maintenance for Taiwan's 6th-Generation Supercomputing Cluster at the Central Weather Administration (CWA), consistently maintaining 99% operational availability. Expert in diagnosing extreme-scale I/O and communication bottlenecks (Lustre/FEFS, InfiniBand/Tofu), orchestrating heterogeneous GPU/CPU clusters (Slurm, PBS, PJM), and tuning foundation models across CUDA, HIP, C++, and Fortran.
   </div>
 
   <!-- Technical Skills -->
@@ -258,7 +258,7 @@
   <div class="skills-list">
     <div class="skill-item"><strong>HPC Cluster Orchestration:</strong> Slurm, Fujitsu PJM, PBS, MPI (OpenMPI), Topology-Aware Scheduling, NUMA/Socket Pinning, InfiniBand, Tofu Interconnect.</div>
     <div class="skill-item"><strong>Accelerated Computing &amp; AI:</strong> PyTorch, HIP, CUDA, ROCm, GPGPU Parallel Computing, Distributed Training (FSDP, DDP), NVIDIA PhysicsNeMo (CorrDiff), FourCastNet, Kernel Profiling (<code>rocprof</code>, <code>Omnitrace</code>, <code>torch.profiler</code>).</div>
-    <div class="skill-item"><strong>Parallel Storage &amp; Systems I/O:</strong> Lustre, Fujitsu Exabyte File System (FEFS), WEKA, DAOS, Storage Fragmentation Modeling (G/G/c, Fork-Join), I/O Latency Diagnostics &amp; Striping Optimization.</div>
+    <div class="skill-item"><strong>Parallel Storage &amp; Systems I/O:</strong> Lustre, Fujitsu Exabyte File System (FEFS), WEKA (WekaFS on Red Hat OpenShift), DAOS, Storage Fragmentation Modeling (G/G/c, Fork-Join), I/O Latency Diagnostics &amp; Striping Optimization.</div>
     <div class="skill-item"><strong>Infrastructure, Cloud &amp; MLOps:</strong> Red Hat OpenShift, Kubernetes, Apptainer/Singularity, Docker, Spack, Linux/UNIX Administration (RHEL/CentOS/Rocky), Bash.</div>
     <div class="skill-item"><strong>Programming &amp; Data:</strong> Python, Modern Fortran, C/C++, SQL (MySQL, PostgreSQL), PHP, Large-Scale Data Analysis &amp; Error Assessment.</div>
   </div>
@@ -282,6 +282,8 @@
       <li>Optimized mission-critical numerical models (GFS, WRF) through code parallelization and workflow re-engineering, reducing core runtime by <strong>35%</strong> for real-time typhoon forecasting operations.</li>
       <li>Automated cluster health monitoring and analytics on the FX1000 supercomputer, eliminating <strong>80%</strong> of manual overhead while executing resource phased re-entry policies during severe I/O load.</li>
       <li>Spearheaded international technology transfer with Fujitsu Japan HQ for supercomputer deployment and localization, authoring comprehensive architectural guides and delivering technical training to <strong>60+</strong> engineers.</li>
+      <li>Helped configure static PersistentVolumes backed by WekaFS on Red Hat OpenShift (OCP), enabling containerized workloads to mount the WEKA file system.</li>
+      <li>Lead a 4-person on-site maintenance team supporting CWA HPC operations, covering incident response, FEFS/Lustre quota and capacity management, and scheduled maintenance.</li>
     </ul>
   </div>
 
@@ -319,11 +321,11 @@
   <div class="section-title">Education</div>
   <div class="edu-row">
     <span class="edu-left"><strong>National Central University (NCU)</strong> — Master of Science (M.S.) in Atmospheric Sciences</span>
-    <span class="edu-dates">Sep 2010 – Jun 2012</span>
+    <span class="edu-dates">Sep 2008 – Jun 2010</span>
   </div>
   <div class="edu-row">
     <span class="edu-left"><strong>National Central University (NCU)</strong> — Bachelor of Science (B.S.) in Atmospheric Physics</span>
-    <span class="edu-dates">Sep 2006 – Jun 2010</span>
+    <span class="edu-dates">Sep 2004 – Jun 2008</span>
   </div>
 </div>
 
@@ -379,11 +381,11 @@
     zh: {
       tagline: "資深高效能運算與 AI 系統工程師／基礎設施架構師",
       titles: ["專業摘要", "技術技能", "工作經歷", "精選專案與開源貢獻", "專利、發表與榮譽", "學歷"],
-      summary: "具備超過 10 年生產環境經驗的高效能運算與 AI 系統工程師暨架構師，專長涵蓋頂尖超級運算基礎設施、平行儲存架構與分散式科學 AI 加速。目前負責臺灣第六代超級電腦（中央氣象署）的系統架構與維運，長期維持 99% 系統可用率。精通極大規模 I/O 與通訊瓶頸診斷（Lustre/FEFS、InfiniBand/Tofu）、異質 GPU/CPU 叢集調度（Slurm、PBS、PJM），以及 CUDA、HIP、C++ 與 Fortran 基礎模型效能調校。",
+      summary: "具備超過 14 年生產環境經驗的高效能運算與 AI 系統工程師暨架構師，專長涵蓋頂尖超級運算基礎設施、平行儲存架構與分散式科學 AI 加速。目前負責臺灣第六代超級電腦（中央氣象署）的系統架構與維運，長期維持 99% 系統可用率。精通極大規模 I/O 與通訊瓶頸診斷（Lustre/FEFS、InfiniBand/Tofu）、異質 GPU/CPU 叢集調度（Slurm、PBS、PJM），以及 CUDA、HIP、C++ 與 Fortran 基礎模型效能調校。",
       skills: [
         "<strong>HPC 叢集調度：</strong> Slurm、Fujitsu PJM、PBS、MPI（OpenMPI）、拓撲感知排程、NUMA/Socket 綁定、InfiniBand、Tofu 互連。",
         "<strong>加速運算與 AI：</strong> PyTorch、HIP、CUDA、ROCm、GPGPU 平行運算、分散式訓練（FSDP、DDP）、NVIDIA PhysicsNeMo（CorrDiff）、FourCastNet、核心效能分析（<code>rocprof</code>、<code>Omnitrace</code>、<code>torch.profiler</code>）。",
-        "<strong>平行儲存與系統 I/O：</strong> Lustre、Fujitsu Exabyte File System（FEFS）、WEKA、DAOS、儲存碎片模型（G/G/c、Fork-Join）、I/O 延遲診斷與條帶化最佳化。",
+        "<strong>平行儲存與系統 I/O：</strong> Lustre、Fujitsu Exabyte File System（FEFS）、WEKA (WekaFS on Red Hat OpenShift)、DAOS、儲存碎片模型（G/G/c、Fork-Join）、I/O 延遲診斷與條帶化最佳化。",
         "<strong>基礎設施、雲端與 MLOps：</strong> Red Hat OpenShift、Kubernetes、Apptainer/Singularity、Docker、Spack、Linux/UNIX 管理（RHEL/CentOS/Rocky）、Bash。",
         "<strong>程式與資料：</strong> Python、Modern Fortran、C/C++、SQL（MySQL、PostgreSQL）、PHP、大規模資料分析與誤差評估。"
       ],
